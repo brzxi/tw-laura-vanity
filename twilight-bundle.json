@@ -1,14 +1,121 @@
 {
     "name": {
-        "ar": "\u062a\u0633\u0631\u064a\u062d\u0629 \u0644\u0648\u0631\u0627",
+        "ar": "تسريحة لورا",
         "en": "Laura Vanity"
     },
     "description": {
-        "ar": "",
-        "en": ""
+        "ar": "قسم تسريحة تفاعلي بشعار المتجر وأدراج تفتح الأقسام",
+        "en": "Interactive vanity section with store logo and drawers linking to categories"
     },
     "author_email": "basel1424221@gmail.com",
     "support_url": "",
     "repository": "https://github.com/brzxi/tw-laura-vanity",
-    "components": []
+    "components": [
+        {
+            "title": "تسريحة لورا",
+            "icon": "sicon-store-alt",
+            "name": "laura-vanity",
+            "key": "1a2bd7fb-3237-4c86-a4cb-39b43766ecae",
+            "image": "https://cdn.jsdelivr.net/gh/brzxi/tw-laura-vanity@main/assets/laura-vanity-720.webp",
+            "fields": [
+                {
+                    "id": "title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان الرئيسي",
+                    "multilanguage": true,
+                    "required": false,
+                    "icon": "sicon-format-text-alt",
+                    "value": {
+                        "ar": "تسريحة لورا",
+                        "en": "Laura's Vanity"
+                    }
+                },
+                {
+                    "id": "subtitle",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان الفرعي",
+                    "multilanguage": true,
+                    "required": false,
+                    "icon": "sicon-format-text-alt",
+                    "value": {
+                        "ar": "افتح الدرج واختر قسمك",
+                        "en": "Open a drawer, pick your section"
+                    }
+                },
+                {
+                    "id": "image",
+                    "type": "string",
+                    "format": "image",
+                    "label": "صورة التسريحة (1080×1620)",
+                    "required": false,
+                    "icon": "sicon-image",
+                    "value": "https://cdn.jsdelivr.net/gh/brzxi/tw-laura-vanity@main/assets/laura-vanity.webp"
+                },
+                {
+                    "id": "button_text",
+                    "type": "string",
+                    "format": "text",
+                    "label": "نص زر الدرج",
+                    "multilanguage": true,
+                    "required": false,
+                    "icon": "sicon-format-text-alt",
+                    "value": {
+                        "ar": "تسوّق الآن",
+                        "en": "Shop now"
+                    }
+                },
+                {
+                    "id": "drawers",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "الأدراج (4)",
+                    "item_label": "درج",
+                    "required": true,
+                    "minLength": 1,
+                    "maxLength": 4,
+                    "value": [
+                        {
+                            "title": "درج العطور",
+                            "link": "https://salla.sa/lata_bwtyk/%D8%B9%D8%B7%D9%88%D8%B1-%D9%85%D8%A7%D8%B3%D8%AA%D8%B1/c1874148690"
+                        },
+                        {
+                            "title": "درج المكياج",
+                            "link": "https://salla.sa/lata_bwtyk/%D9%85%D9%8A%D9%83-%D8%A7%D8%A8/c501751377"
+                        },
+                        {
+                            "title": "درج المجموعات",
+                            "link": "https://salla.sa/lata_bwtyk/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A7%D8%AA/c192904028"
+                        },
+                        {
+                            "title": "درج عروض ٤ عطور",
+                            "link": "https://salla.sa/lata_bwtyk/%D8%B9%D8%B1%D9%88%D8%B6-%D9%A4-%D8%B9%D8%B7%D9%88%D8%B1/c925022558"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "اسم الدرج",
+                            "multilanguage": true,
+                            "required": true,
+                            "icon": "sicon-format-text-alt",
+                            "minLength": 1,
+                            "maxLength": 40
+                        },
+                        {
+                            "id": "link",
+                            "type": "string",
+                            "format": "url",
+                            "label": "رابط الدرج",
+                            "required": true,
+                            "icon": "sicon-link"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }
